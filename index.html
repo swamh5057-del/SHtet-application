@@ -393,23 +393,4 @@
         function sendMessage() {
             let input = document.getElementById('chatInput');
             let msgArea = document.getElementById('chatMessages');
-            if(input.value.trim() === '') return;
-            
-            msgArea.innerHTML += `<div class="bg-indigo-600 p-2.5 rounded-xl max-w-[80%] ml-auto text-white">${input.value}</div>`;
-            let val = input.value;
-            input.value = '';
-
-            setTimeout(() => {
-                msgArea.innerHTML += `<div class="bg-slate-800 p-2.5 rounded-xl max-w-[80%]">SH AI: "${val}" ကို လက်ခံရရှိပါပြီ။ အကောင်းဆုံး ဆောင်ရွက်ပေးနေပါမည်။</div>`;
-                msgArea.scrollTop = msgArea.scrollHeight;
-            }, 1000);
-        }
-
-        function generateAI() {
-            let prompt = document.getElementById('aiPrompt').value;
-            let result = document.getElementById('aiResult');
-            if(!prompt) return alert('ကျေးဇူးပြု၍ စာရိုက်ထည့်ပါ။');
-            
-            result.innerHTML = `<i class="fa-solid fa-spinner fa-spin text-indigo-400 text-lg"></i> ဖန်တီးနေပါပြီ... ခဏစောင့်ပါ`;
-            setTimeout(() => {
-                result.innerHTML = `<div class="text-indigo-300 font-bold mb-1">ဖန်တီးပြီးစီးပါပြီ!</div><div class="h-24 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">AI Result for: "${pr
+            if(input.value.trim() === '') return
